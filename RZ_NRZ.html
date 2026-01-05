@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>3.4.1 Códigos de Línea Avanzados</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2, h3{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td{
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #003366;
+    color: white;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.4.1 RZ, NRZ, AMI, Manchester y Otros Códigos de Línea</h1>
+
+<h2>Introducción</h2>
+<p>
+Los <strong>códigos de línea</strong> son técnicas utilizadas en telecomunicaciones para
+representar datos digitales mediante señales eléctricas. Cada método tiene
+características particulares relacionadas con el ancho de banda, la sincronización,
+la detección de errores y la inmunidad al ruido.
+</p>
+
+<h2>RZ (Return to Zero)</h2>
+<p>
+El código <strong>RZ</strong> es un código con retorno a cero, donde la señal vuelve al nivel
+cero dentro del intervalo de cada bit. Esto mejora la sincronización, pero aumenta
+el ancho de banda requerido.
+</p>
+
+<ul>
+    <li><strong>RZ neutral:</strong> El bit 0 se representa con un nivel +A y regresa a 0V a mitad del bit; el bit 1 se mantiene en nivel bajo.</li>
+    <li><strong>RZ polar:</strong> El bit 0 se representa con una transición de +A a -A; el bit 1 no presenta transición.</li>
+    <li><strong>RZ bipolar:</strong> El bit 1 no tiene transición; el bit 0 usa niveles alternados con transición.</li>
+</ul>
+
+<h2>NRZ (Non Return to Zero)</h2>
+<p>
+En los códigos <strong>NRZ</strong> la señal no regresa a cero durante el intervalo del bit.
+Son más eficientes en ancho de banda, pero presentan problemas de sincronización
+en secuencias largas.
+</p>
+
+<ul>
+    <li><strong>NRZ-L:</strong> Voltaje positivo representa 0 y voltaje negativo representa 1.</li>
+    <li><strong>NRZ-I:</strong> El bit 1 se representa con una inversión de voltaje; el bit 0 no provoca cambio.</li>
+</ul>
+
+<h2>Código AMI (Alternate Mark Inversion)</h2>
+<p>
+El código <strong>AMI</strong> representa los bits 1 mediante pulsos positivos y negativos
+alternados, mientras que los bits 0 se representan sin voltaje.
+</p>
+
+<ul>
+    <li>No permite más de 15 ceros consecutivos.</li>
+    <li>Facilita la detección de errores.</li>
+    <li>Elimina la componente DC.</li>
+</ul>
+
+<h3>Aplicaciones del AMI</h3>
+<ul>
+    <li>Redes WAN</li>
+    <li>Transmisión infrarroja</li>
+    <li>Códigos de barras</li>
+    <li>Reducción de diafonía en cables telefónicos</li>
+</ul>
+
+<h2>Pseudoternaria</h2>
+<p>
+La <strong>codificación pseudoternaria</strong> es similar a AMI, pero en este caso los
+ceros alternan su polaridad y los unos se representan sin voltaje.
+</p>
+
+<h2>Manchester</h2>
+<p>
+La <strong>codificación Manchester</strong> combina los datos y el reloj en una sola señal,
+proporcionando autosincronización.
+</p>
+
+<ul>
+    <li>Transición de negativo a positivo → bit 1</li>
+    <li>Transición de positivo a negativo → bit 0</li>
+</ul>
+
+<p>
+Es ampliamente utilizada en redes Ethernet como 10Base5 y 10Base-F.
+</p>
+
+<h2>Manchester Diferencial</h2>
+<p>
+La <strong>codificación Manchester diferencial</strong> indica el valor del bit mediante la
+presencia o ausencia de una transición al inicio del intervalo del bit.
+</p>
+
+<ul>
+    <li>Bit 1: no hay transición al inicio</li>
+    <li>Bit 0: hay transición al inicio</li>
+    <li>Siempre existe una transición a mitad del bit</li>
+</ul>
+
+<p>
+Es más robusta frente al ruido y funciona incluso si la señal se invierte.
+</p>
+
+<h2>B8ZS (Bipolar 8-Zero Substitution)</h2>
+<p>
+El código <strong>B8ZS</strong> se utiliza en sistemas T1 para evitar largas secuencias de ceros.
+Cuando aparecen ocho ceros consecutivos, se introducen violaciones bipolares.
+</p>
+
+<p>
+La sustitución es: <strong>000V B0VB</strong>, donde:
+</p>
+
+<ul>
+    <li><strong>V:</strong> Violación bipolar</li>
+    <li><strong>B:</strong> Transición bipolar válida</li>
+</ul>
+
+<h2>HDB3 (High Density Bipolar 3)</h2>
+<p>
+El código <strong>HDB3</strong> es una mejora del AMI que reemplaza secuencias de cuatro ceros
+por patrones especiales para mantener la sincronización y eliminar la componente DC.
+</p>
+
+
+<p>
+<a href="https://www.bing.com/videos/riverview/relatedvideo?q=3.4.1+RZ%2c+NRZ%2c+NRZ-L%2c+AMI%2c+pseudoternaria%2c+Manchester%2c+Manchester+diferencial%2c+B8ZS%2c+HDB3" target="_blank">
+Video explicativo sobre códigos de línea
+</a>
+</p>
+
+<p>
+<a href="https://tutorialtecnicasdemodulaciontelecom.blogspot.com/2020/11/341-rz-nrz-nrz-l-ami-pseudoternaria.html" target="_blank">
+Tutorial Técnicas de Modulación – 3.4.1
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al Menú de Modulación
+    </button>
+</div>
+
+</div>
+</body>
+</html>

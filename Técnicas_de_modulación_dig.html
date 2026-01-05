@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>3.2 Técnicas de Modulación Digital</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2, h3{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+img{
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td{
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #003366;
+    color: white;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.2 Técnicas de Modulación Digital</h1>
+
+<h2>Introducción</h2>
+
+<p>
+La <strong>modulación digital</strong> es fundamental en los sistemas modernos de telecomunicaciones,
+ya que permite transmitir información digital (bits) a través de medios físicos como cables,
+fibra óptica o enlaces inalámbricos. Para lograrlo, los datos digitales deben convertirse en
+señales eléctricas adecuadas que puedan viajar eficientemente por el canal de transmisión.
+</p>
+
+<p>
+Estas técnicas buscan optimizar la <strong>eficiencia del ancho de banda</strong>, mejorar la
+<strong>resistencia al ruido</strong> y asegurar una correcta sincronización entre el emisor y el receptor.
+</p>
+
+<h2>Conversión Digital a Digital</h2>
+
+<p>
+La conversión digital a digital consiste en representar los bits (0 y 1) mediante distintos
+niveles de voltaje. Existen varios esquemas, entre los más importantes se encuentran:
+</p>
+
+<h3>Codificación Unipolar</h3>
+
+<p>
+En la codificación unipolar, el bit <strong>1</strong> se representa mediante un nivel de voltaje positivo
+(por ejemplo +5V) y el bit <strong>0</strong> se representa con 0V.
+</p>
+
+<ul>
+    <li>Fácil implementación.</li>
+    <li>Alta componente de corriente directa (DC).</li>
+    <li>Problemas de sincronización.</li>
+</ul>
+
+<h3>Codificación Polar</h3>
+
+<p>
+En la codificación polar, los bits se representan con voltajes positivos y negativos.
+Un <strong>1</strong> se puede representar con +5V y un <strong>0</strong> con −5V.
+</p>
+
+<ul>
+    <li>Reduce la componente DC.</li>
+    <li>Mejor sincronización.</li>
+    <li>Mayor inmunidad al ruido.</li>
+</ul>
+
+<h3>Codificación Bipolar (AMI)</h3>
+
+<p>
+La codificación bipolar, también conocida como <strong>AMI (Alternate Mark Inversion)</strong>,
+representa los bits <strong>1</strong> alternando su polaridad entre voltaje positivo y negativo,
+mientras que los bits <strong>0</strong> se representan con 0V.
+</p>
+
+<ul>
+    <li>Reduce componentes de baja frecuencia.</li>
+    <li>Facilita la detección de errores.</li>
+    <li>Utilizada en sistemas T1 y E1.</li>
+</ul>
+
+<h2>Descripción de la imagen</h2>
+
+<img src="https://tse1.mm.bing.net/th/id/OIP.NdeMf1sYlJJ_Bdcf_NoC_AHaEZ?rs=1&pid=ImgDetMain&o=7&rm=3"
+alt="Codificación digital unipolar, polar y bipolar">
+
+<p>
+<strong>Descripción:</strong>  
+La imagen muestra una comparación gráfica de las técnicas de codificación digital.
+En la codificación unipolar, los pulsos solo presentan valores positivos.
+En la codificación polar, los pulsos alternan entre valores positivos y negativos.
+Finalmente, en la codificación bipolar (AMI), los bits "1" cambian de polaridad en cada aparición,
+mientras que los bits "0" permanecen en nivel cero.
+</p>
+
+<h2>Tabla comparativa de técnicas</h2>
+
+<table>
+<tr>
+    <th>Técnica</th>
+    <th>Representación</th>
+    <th>Ventajas</th>
+    <th>Desventajas</th>
+</tr>
+<tr>
+    <td>Unipolar</td>
+    <td>1 = +V, 0 = 0V</td>
+    <td>Simplicidad</td>
+    <td>Alta DC, mala sincronización</td>
+</tr>
+<tr>
+    <td>Polar</td>
+    <td>1 = +V, 0 = −V</td>
+    <td>Menor DC, mejor sincronización</td>
+    <td>Mayor complejidad</td>
+</tr>
+<tr>
+    <td>Bipolar (AMI)</td>
+    <td>1 = +V / −V alternado, 0 = 0V</td>
+    <td>Detección de errores</td>
+    <td>Secuencias largas de ceros</td>
+</tr>
+</table>
+
+<h2>Fuente confiable</h2>
+
+<p>
+<a href="https://telecomfundamentos.blogspot.com/2024/11/32-tecnicas-de-modulacion-digital.html"
+target="_blank">
+Fundamentos de Telecomunicaciones – Técnicas de Modulación Digital
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al Menu de modulacion
+    </button>
+</div>
+
+</div>
+</body>
+</html>

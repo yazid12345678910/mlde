@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>3.3.1 Muestreo, Cuantización y Codificación</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2, h3{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+.diagram{
+    background: #eef2f7;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: monospace;
+    margin: 20px 0;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td{
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #003366;
+    color: white;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.3.1 Muestreo, Cuantización y Codificación</h1>
+
+<h2>Muestreo</h2>
+
+<p>
+El <strong>muestreo</strong> es el proceso mediante el cual se toman muestras periódicas
+de la <strong>amplitud</strong> de una señal analógica continua.
+La velocidad a la que se obtienen estas muestras se denomina
+<strong>frecuencia de muestreo</strong> y se mide en hertz (Hz).
+</p>
+
+<p>
+Para convertir una señal analógica en digital, el primer paso es el muestreo,
+el cual consiste en tomar valores de la señal en instantes de tiempo específicos.
+</p>
+
+<p>
+De acuerdo con el <strong>Teorema de Nyquist–Shannon</strong>, la frecuencia de muestreo
+debe ser al menos el doble de la frecuencia máxima presente en la señal original
+para evitar el fenómeno de <strong>aliasing</strong>.
+</p>
+
+<h3>Diagrama del proceso de Muestreo</h3>
+
+<div class="diagram">
+Señal Analógica (continua)
+~~~~~~~∿~~~~~~∿~~~~~~∿~~~~~~
+
+Puntos de Muestreo
+|   |   |   |   |   |   |
+
+Señal Muestreada
+●   ●   ●   ●   ●   ●   ●
+</div>
+
+<h2>Cuantización</h2>
+
+<p>
+La <strong>cuantización</strong> es el proceso mediante el cual cada muestra obtenida
+se aproxima a uno de los niveles discretos de amplitud disponibles.
+</p>
+
+<p>
+Este proceso convierte valores continuos en valores discretos, lo que introduce
+un pequeño error conocido como <strong>error de cuantización</strong>.
+</p>
+
+<div class="diagram">
+Voltaje original → 2.7 V  
+Nivel más cercano → Nivel 3
+</div>
+
+<h2>Codificación</h2>
+
+<p>
+La <strong>codificación</strong> consiste en convertir los niveles cuantizados
+en una representación binaria.
+</p>
+
+<p>
+Cada nivel se representa mediante una secuencia de bits, cuyo tamaño depende
+del número de niveles de cuantización utilizados.
+</p>
+
+<h3>Diagrama del proceso completo</h3>
+
+<div class="diagram">
+Señal Analógica
+       ↓
+   Muestreo
+       ↓
+  Cuantización
+       ↓
+  Codificación
+       ↓
+Señal Digital (10101001)
+</div>
+
+<h2>Tabla comparativa del proceso</h2>
+
+<table>
+<tr>
+    <th>Etapa</th>
+    <th>Descripción</th>
+    <th>Resultado</th>
+</tr>
+<tr>
+    <td>Muestreo</td>
+    <td>Toma valores de la señal analógica en intervalos regulares</td>
+    <td>Muestras discretas</td>
+</tr>
+<tr>
+    <td>Cuantización</td>
+    <td>Asigna cada muestra a un nivel discreto de amplitud</td>
+    <td>Valores numéricos</td>
+</tr>
+<tr>
+    <td>Codificación</td>
+    <td>Convierte los valores cuantizados en binario</td>
+    <td>Secuencia de bits</td>
+</tr>
+</table>
+
+<h2>Fuente de consulta</h2>
+
+<p>
+<a href="https://sites.google.com/view/proyectofinaldetelecomunicacio/3-modulaci%C3%B3n/3-3-1-muestreo-cuantizaci%C3%B3n-y-codificaci%C3%B3n" target="_blank">
+Proyecto Final de Telecomunicaciones – Muestreo, Cuantización y Codificación
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al menú de modulación
+    </button>
+</div>
+
+</div>
+</body>
+</html>

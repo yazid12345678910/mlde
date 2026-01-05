@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>3.2 Técnicas de Modulación Digital: ASK, FSK, PSK y QAM</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2, h3{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+img{
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td{
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #003366;
+    color: white;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.2 Técnicas de Modulación Digital</h1>
+
+<h2>Introducción</h2>
+
+<p>
+Uno de los principales objetivos de las comunicaciones es utilizar una
+<strong>frecuencia portadora</strong> como base para transmitir información.
+Para lograrlo, dicha portadora se modifica mediante un proceso llamado
+<strong>modulación</strong>, que permite codificar los datos digitales en la señal.
+</p>
+
+<p>
+En la modulación digital, la información se transmite alterando parámetros
+de la señal portadora como la <strong>amplitud</strong>, la <strong>frecuencia</strong>
+o la <strong>fase</strong>, dando origen a técnicas como ASK, FSK, PSK y QAM.
+</p>
+
+<h2>Modulación por Desplazamiento de Amplitud (ASK)</h2>
+
+<p>
+La <strong>Modulación por Desplazamiento de Amplitud (ASK)</strong> consiste en
+variar la amplitud de la señal portadora en función de los bits transmitidos.
+Generalmente, un bit “1” se representa con una amplitud distinta de cero,
+mientras que un bit “0” se representa con ausencia de señal.
+</p>
+
+<ul>
+    <li>Técnica sencilla de implementar.</li>
+    <li>Sensible al ruido.</li>
+    <li>Usada en sistemas simples y RFID.</li>
+</ul>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/ASK_Modulation.svg"
+alt="Diagrama de modulación ASK">
+
+<h2>Modulación por Desplazamiento de Frecuencia (FSK)</h2>
+
+<p>
+La <strong>Modulación por Desplazamiento de Frecuencia (FSK)</strong> transmite
+la información cambiando la frecuencia de la portadora. Un bit “1” se
+representa con una frecuencia y un bit “0” con otra diferente.
+</p>
+
+<ul>
+    <li>Mayor inmunidad al ruido que ASK.</li>
+    <li>Mayor uso de ancho de banda.</li>
+    <li>Común en modems y transmisión inalámbrica.</li>
+</ul>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Frequency-shift_keying.svg"
+alt="Diagrama de modulación FSK">
+
+<h2>Modulación por Desplazamiento de Fase (PSK)</h2>
+
+<p>
+La <strong>Modulación por Desplazamiento de Fase (PSK)</strong> codifica los
+datos cambiando la fase de la señal portadora. En su forma más simple (BPSK),
+la fase se desplaza 180 grados para representar los bits.
+</p>
+
+<ul>
+    <li>Alta eficiencia.</li>
+    <li>Buena resistencia al ruido.</li>
+    <li>Muy utilizada en sistemas digitales modernos.</li>
+</ul>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/74/BPSK_Modulation.svg"
+alt="Diagrama de modulación PSK">
+
+<h2>Modulación de Amplitud en Cuadratura (QAM)</h2>
+
+<p>
+La <strong>Modulación de Amplitud en Cuadratura (QAM)</strong> combina la
+modulación de amplitud y fase para transmitir múltiples bits por símbolo,
+logrando una alta eficiencia espectral.
+</p>
+
+<ul>
+    <li>Alta velocidad de transmisión.</li>
+    <li>Usada en Wi-Fi, LTE y televisión digital.</li>
+    <li>Mayor complejidad y sensibilidad al ruido.</li>
+</ul>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/QAM_Constellation.svg"
+alt="Diagrama de modulación QAM">
+
+<h2>Tabla comparativa</h2>
+
+<table>
+<tr>
+    <th>Técnica</th>
+    <th>Parámetro modificado</th>
+    <th>Ventaja principal</th>
+    <th>Desventaja</th>
+</tr>
+<tr>
+    <td>ASK</td>
+    <td>Amplitud</td>
+    <td>Simplicidad</td>
+    <td>Sensible al ruido</td>
+</tr>
+<tr>
+    <td>FSK</td>
+    <td>Frecuencia</td>
+    <td>Mayor robustez</td>
+    <td>Mayor ancho de banda</td>
+</tr>
+<tr>
+    <td>PSK</td>
+    <td>Fase</td>
+    <td>Alta eficiencia</td>
+    <td>Mayor complejidad</td>
+</tr>
+<tr>
+    <td>QAM</td>
+    <td>Amplitud y fase</td>
+    <td>Alta velocidad</td>
+    <td>Muy sensible al ruido</td>
+</tr>
+</table>
+
+<h2>Fuentes de consulta</h2>
+
+<p>
+<a href="http://dsc.itpn.mx/recursosisc/5semestre/fundamentosdetelecomunicaciones/Unidad%20III.pdf"
+target="_blank">
+Fundamentos de Telecomunicaciones – Unidad III (Fuente académica)
+</a>
+</p>
+
+<p>
+<a href="https://www.bing.com/videos/riverview/relatedvideo?q=3.2+T%c3%a9cnicas+de+modulaci%c3%b3n+digital.&&view=riverview&mmscn=mtsc&mid=FB075EF4CB3589DEBE01FB075EF4CB3589DEBE01&&aps=1&FORM=VMSOVR"
+target="_blank">
+Video explicativo: Técnicas de modulación digital
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al Menu de modulacion
+    </button>
+</div>
+
+</div>
+</body>
+</html>

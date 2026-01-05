@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>3.5 Módem, Estándares y Protocolos</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.5 Módem, Estándares y Protocolos</h1>
+
+<h2>Módem</h2>
+<p>
+En los inicios de Internet, uno de los medios de transmisión más utilizados para la
+conexión de datos fue la <strong>Red Telefónica Básica (RTB)</strong>, debido a su amplia cobertura
+y bajo costo. Esta red fue diseñada originalmente para la transmisión de voz, la cual
+utiliza señales analógicas, mientras que los datos de las computadoras son digitales.
+</p>
+
+<p>
+Un <strong>módem</strong> es un dispositivo que permite convertir las señales digitales generadas
+por una computadora en señales analógicas capaces de transmitirse por la línea telefónica,
+y viceversa. Gracias al módem, es posible intercambiar información entre computadoras
+remotas.
+</p>
+
+<p>
+El uso del módem permite acceder a la <strong>World Wide Web (WWW)</strong>, enviar y recibir
+<strong>correo electrónico</strong>, transferir archivos, jugar en línea e incluso transmitir
+fax y voz en determinados modelos.
+</p>
+
+<h2>Velocidades de transmisión</h2>
+<p>
+Los distintos tipos de módems operan a diferentes velocidades, dependiendo de la
+tecnología empleada:
+</p>
+
+<ul>
+    <li>Módems tradicionales: hasta <strong>33.6 Kbps</strong> y faxes a <strong>14.4 Kbps</strong>.</li>
+    <li>Módems de 56K: descargas de hasta <strong>56 Kbps</strong> desde un ISP.</li>
+    <li>Módems <strong>ISDN</strong>: utilizan líneas digitales y alcanzan velocidades de hasta <strong>128 Kbps</strong>.</li>
+</ul>
+
+<h2>Modulación y Demodulación</h2>
+<p>
+Las computadoras son dispositivos digitales que operan mediante estados discretos
+(encendido y apagado). En contraste, las líneas telefónicas transmiten señales analógicas
+continuas. El módem actúa como intermediario entre ambos sistemas.
+</p>
+
+<p>
+Para transmitir datos, el módem realiza el proceso de <strong>modulación</strong>, variando
+parámetros como la frecuencia, fase o amplitud de la señal digital para obtener una
+señal analógica continua. Al recibir la señal, el módem ejecuta la
+<strong>demodulación</strong>, recuperando los datos digitales originales.
+</p>
+
+<p>
+El nombre <strong>módem</strong> proviene de la combinación de los términos
+<strong>MO</strong>dulación y <strong>DEM</strong>odulación.
+</p>
+
+<h2>Estándares</h2>
+<p>
+Los <strong>estándares</strong> son recomendaciones técnicas establecidas por organismos
+internacionales que regulan la operación de los módems. Estos estándares definen
+las técnicas de modulación, transmisión, corrección de errores y compresión de datos.
+</p>
+
+<p>
+Hasta mediados de la década de 1980, los módems en Estados Unidos utilizaban estándares
+desarrollados por los laboratorios Bell, como <strong>Bell 103</strong> y <strong>Bell 212A</strong>.
+Sin embargo, estos no eran compatibles a nivel internacional.
+</p>
+
+<p>
+El organismo encargado de la normalización internacional es el
+<strong>ITU-T</strong> (International Telecommunication Union – Telecommunication Sector),
+anteriormente conocido como <strong>CCITT</strong>.
+</p>
+
+<h2>Principales estándares de módem</h2>
+<ul>
+    <li><strong>V.22:</strong> 1200 bps a 600 baudios.</li>
+    <li><strong>V.22bis:</strong> 2400 bps a 600 baudios.</li>
+    <li><strong>V.32:</strong> 4800 y 9600 bps a 2400 baudios.</li>
+    <li><strong>V.32bis:</strong> Hasta 14,400 bps con retrocompatibilidad.</li>
+    <li><strong>V.32terbo:</strong> Hasta 19,200 bps (no estándar ITU).</li>
+    <li><strong>V.34:</strong> Hasta 28,800 bps.</li>
+</ul>
+
+<h2>Protocolos</h2>
+<p>
+Los <strong>protocolos</strong> son conjuntos de reglas que controlan la transferencia de
+información entre dos dispositivos de comunicación, garantizando una transmisión
+ordenada, segura y confiable.
+</p>
+
+<h2>Protocolos más utilizados</h2>
+<ul>
+    <li><strong>XMODEM:</strong> Envía bloques de 128 bytes con verificación básica.</li>
+    <li><strong>XMODEM CRC:</strong> Utiliza verificación CRC para detección de errores.</li>
+    <li><strong>XMODEM 1K:</strong> Transmisión en bloques de 1 KB.</li>
+    <li><strong>YMODEM:</strong> Permite transferencia de múltiples archivos.</li>
+    <li><strong>ZMODEM:</strong> Protocolo rápido con corrección automática de errores.</li>
+    <li><strong>SEALINK:</strong> Protocolo full-dúplex derivado de XMODEM.</li>
+    <li><strong>KERMIT:</strong> Compatible con PCs y sistemas Mainframe.</li>
+    <li><strong>MODEM7:</strong> Comunicación con sistemas CP/M.</li>
+</ul>
+
+<h2>Fuente de consulta</h2>
+<p>
+<a href="https://tutorialtecnicasdemodulaciontelecom.blogspot.com/2020/11/35-modem-estandares-y-protocolos.html" target="_blank">
+Tutorial Técnicas de Modulación – 3.5 Módem, Estándares y Protocolos
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al Menú de Modulación
+    </button>
+</div>
+
+</div>
+</body>
+</html>

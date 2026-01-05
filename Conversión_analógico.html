@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>3.3 Conversión Analógico – Digital</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    max-width: 1100px;
+    background: rgba(255,255,255,0.97);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: justify;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+h1, h2, h3{
+    background: linear-gradient(90deg, #003366, #0056b3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+ul{
+    margin-left: 25px;
+}
+img{
+    display: block;
+    margin: 25px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td{
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #003366;
+    color: white;
+}
+a{
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer-buttons{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-buttons button{
+    width: 60%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8b0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.footer-buttons button:hover{
+    background: linear-gradient(90deg, #ff0000, #ff6b6b);
+}
+</style>
+</head>
+
+<body>
+<div class="contenedor">
+
+<h1>3.3 Conversión Analógico – Digital</h1>
+
+<h2>¿Qué es una señal analógica?</h2>
+
+<p>
+El término <strong>analógico</strong> en el área de telecomunicaciones y cómputo
+se refiere a todo proceso de entrada o salida cuyos valores son
+<strong>continuos</strong>.  
+Una señal continua es aquella que puede tomar una <strong>infinidad de valores</strong>
+dentro de un límite superior e inferior.
+</p>
+
+<p>
+Ejemplos de señales analógicas son:
+</p>
+
+<ul>
+    <li>La voz humana</li>
+    <li>La temperatura</li>
+    <li>La presión</li>
+    <li>Señales de audio y video analógicos</li>
+</ul>
+
+<h2>¿Qué es una señal digital?</h2>
+
+<p>
+El término <strong>digital</strong> involucra valores de entrada y salida
+<strong>discretos</strong>.  
+Una señal discreta solo puede tomar valores específicos y definidos.
+</p>
+
+<p>
+En las comunicaciones digitales y el cómputo, estos valores suelen ser:
+</p>
+
+<ul>
+    <li>0 (cero)</li>
+    <li>1 (uno)</li>
+</ul>
+
+<p>
+Las señales digitales son más resistentes al ruido, fáciles de procesar y
+almacenar, lo que explica su amplio uso en los sistemas modernos de
+telecomunicaciones.
+</p>
+
+<h2>Conversión Analógico – Digital</h2>
+
+<p>
+La conversión analógico–digital es el proceso mediante el cual una señal
+analógica se transforma en una señal digital para poder ser procesada,
+almacenada o transmitida por sistemas digitales.
+</p>
+
+<p>
+Este proceso se realiza en <strong>tres etapas fundamentales</strong>:
+</p>
+
+<ul>
+    <li>Muestreo</li>
+    <li>Cuantización</li>
+    <li>Codificación</li>
+</ul>
+
+<h2>Muestreo</h2>
+
+<p>
+El <strong>muestreo</strong> consiste en tomar valores de una señal analógica en
+intervalos regulares de tiempo.  
+Según el <strong>teorema de Nyquist</strong>, la frecuencia de muestreo debe ser al
+menos el doble de la frecuencia máxima de la señal para evitar pérdida de
+información.
+</p>
+
+<h2>Cuantización</h2>
+
+<p>
+La <strong>cuantización</strong> es el proceso mediante el cual los valores muestreados
+se aproximan a niveles discretos predeterminados.  
+Este proceso introduce un error llamado <strong>ruido de cuantización</strong>.
+</p>
+
+<h2>Codificación</h2>
+
+<p>
+La <strong>codificación</strong> convierte los valores cuantizados en secuencias
+binarias (ceros y unos), permitiendo que la señal sea procesada por sistemas
+digitales.
+</p>
+
+<h2>Diagrama del proceso Analógico – Digital</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Analog_to_digital_converter_block_diagram.svg"
+alt="Diagrama de conversión analógico digital">
+
+<h2>Tabla comparativa: Señal analógica vs digital</h2>
+
+<table>
+<tr>
+    <th>Característica</th>
+    <th>Analógica</th>
+    <th>Digital</th>
+</tr>
+<tr>
+    <td>Tipo de valores</td>
+    <td>Continuos</td>
+    <td>Discretos</td>
+</tr>
+<tr>
+    <td>Resistencia al ruido</td>
+    <td>Baja</td>
+    <td>Alta</td>
+</tr>
+<tr>
+    <td>Procesamiento</td>
+    <td>Complejo</td>
+    <td>Más sencillo</td>
+</tr>
+<tr>
+    <td>Ejemplos</td>
+    <td>Voz, audio, temperatura</td>
+    <td>Computadoras, redes digitales</td>
+</tr>
+</table>
+
+<h2>Fuente de consulta</h2>
+
+<p>
+<a href="http://dsc.itpn.mx/recursosisc/5semestre/fundamentosdetelecomunicaciones/Unidad%20III.pdf"
+target="_blank">
+Fundamentos de Telecomunicaciones – Unidad III (Fuente académica)
+</a>
+</p>
+
+<div class="footer-buttons">
+    <button onclick="location.href='modulacion.html'">
+        Regresar al Menu de modulacion
+    </button>
+</div>
+
+</div>
+</body>
+</html>
